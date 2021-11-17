@@ -6,7 +6,7 @@ const Home = () => {
   const [listOfPosts, setListOfPosts] = useState([]);
   let history = useHistory();
   useEffect(() => {
-    axios.get('http://localhost:3001/posts').then((res) => {
+    axios.get('/posts').then((res) => {
       setListOfPosts(res.data);
     });
   }, []);
