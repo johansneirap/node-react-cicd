@@ -10,7 +10,7 @@ const Login = () => {
 
   const login = async () => {
     const data = { username, password };
-    const res = await axios.post('http://localhost:3001/auth/login', data);
+    const res = await axios.post('/auth/login', data);
     if (res.data.error) alert(res.data.error);
     else {
       sessionStorage.setItem('accessToken', res.data);

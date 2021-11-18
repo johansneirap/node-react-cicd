@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <div className="navbar">
-          <Link to="/">Home Page</Link>
+          <Link to="/">Home Page </Link>
           <Link to="/createpost">Create a Post</Link>
           <Link to="/login">Login</Link>
           <Link to="/registration">Registration</Link>
@@ -24,6 +24,7 @@ function App() {
           <Route path="/login" exact component={Login}></Route>
         </Switch>
       </Router>
+      Hello from CICD
     </div>
   );
 }

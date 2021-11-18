@@ -17,7 +17,7 @@ const CreatePost = () => {
   });
 
   const onSubmit = (data) => {
-    axios.post('http://localhost:3001/posts', data).then((res) => {
+    axios.post('/posts', data).then((res) => {
       history.push('/');
     });
   };

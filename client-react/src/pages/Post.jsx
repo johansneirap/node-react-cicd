@@ -9,11 +9,11 @@ const Post = () => {
   const [newComment, setNewComment] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3001/posts/byId/' + id).then((res) => {
+    axios.get('/posts/byId/' + id).then((res) => {
       setPostObject(res.data);
     });
 
-    axios.get('http://localhost:3001/comments/' + id).then((res) => {
+    axios.get('/comments/' + id).then((res) => {
       setComments(res.data);
       // console.log(comments);
     });
@@ -21,12 +21,12 @@ const Post = () => {
 
   const addComment = () => {
     const getComments = async () => {
-      const res = await axios.get('http://localhost:3001/comments/' + id);
+      const res = await axios.get('/comments/' + id);
       setComments(res.data);
     };
     axios
       .post(
-        'http://localhost:3001/comments/',
+        '/comments/',
         {
           commentBody: newComment,
           PostId: id,
