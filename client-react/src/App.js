@@ -24,7 +24,8 @@ function App() {
           <Route path="/login" exact component={Login}></Route>
         </Switch>
       </Router>
-      Hello from CICD
+      Hello from CICD <br />
+      version 1.1 push number 1
     </div>
   );
 }
