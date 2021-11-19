@@ -6,7 +6,7 @@ const path = require('path')
 app.use(express.json());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, '../client-react/build'), { index: false }))
+app.use(express.static(path.join(__dirname, '../client-react/build')))
 
 const db = require('./models');
 
