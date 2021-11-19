@@ -25,7 +25,7 @@ function App() {
         </Switch>
       </Router>
       Hello from CICD <br />
-      version 1.1 push number 1
+      version 1.2 push number 2
     </div>
   );
 }
