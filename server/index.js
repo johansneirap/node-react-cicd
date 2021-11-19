@@ -6,11 +6,9 @@ const path = require('path')
 app.use(express.json());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, '../client-react/build')))
+app.use(express.static(path.join(__dirname, '../client-react/build'), { index: false }))
 
 const db = require('./models');
-
-app.use
 
 // Routers
 const postRouter = require('./routes/Posts');
