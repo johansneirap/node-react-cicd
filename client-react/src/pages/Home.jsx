@@ -12,7 +12,7 @@ const Home = () => {
   }, []);
   return (
     <div>
-      {listOfPosts.map((value, key) => {
+      {listOfPosts && listOfPosts.map((value, key) => {
         return (
           <div
             key={value.id}
