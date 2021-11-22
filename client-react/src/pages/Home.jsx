@@ -21,7 +21,7 @@ const Home = () => {
               history.push(`/post/${value.id}`);
             }}
           >
-            <div className="title">{value.title} DEPLOYED WITH GITHUB ACTIONS CI/CD</div>
+            <div className="title">{value.title}</div>
             <div className="body">{value.postText}</div>
             <div className="footer">{value.username}</div>
           </div>
