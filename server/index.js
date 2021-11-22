@@ -8,13 +8,6 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, '../client-react/build')))
 
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client-react/build/index.html'), (err) => {
-        if (err) {
-            res.status(500).send(err);
-        }
-    })
-})
 
 const db = require('./models');
 
@@ -31,3 +24,12 @@ db.sequelize.sync().then(() => {
         console.log('Server running on port 3001');
     });
 });
+
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client-react/build/index.html'), (err) => {
+        if (err) {
+            res.status(500).send(err);
+        }
+    })
+})
